@@ -1,0 +1,12 @@
+article(class= workers.length === 0 ? "some-class" : "")
+    for item in workers
+        section
+            a(href="#", data-item= item.id)
+                img(src= item.avatar)
+                p= item.name
+                p= item.position
+                p= item.location
+    else
+        p= site.noData
+
+

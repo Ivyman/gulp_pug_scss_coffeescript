@@ -1,0 +1,16 @@
+$fontTypes: (
+  ("Regular", "normal"),
+  ("Light", "300"),
+  ("SemiBold", "600")
+);
+
+@each $type in $fontTypes {
+  @font-face {
+    font-family: "Open Sans";
+    src: url("#{$fontPath}/OpenSans-#{nth($type, 1)}.eot");
+    src: url("#{$fontPath}/OpenSans-#{nth($type, 1)}.eot?#iefix") format("embedded-opentype"),
+    url("#{$fontPath}/OpenSans-#{nth($type, 1)}.woff") format("woff");
+    font-weight: #{nth($type, 2)};
+    font-style: normal;
+  }
+}

@@ -1,0 +1,9 @@
+@import "reset";
+@import "variables";
+@import "fonts";
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: url("#{$imagePath}/bg.png");
+}

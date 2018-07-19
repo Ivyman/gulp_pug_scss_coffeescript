@@ -1,0 +1,35 @@
+$fontPath: "/assets/fonts";
+$imagePath: "/assets/images";
+
+$white: #fff;
+$mainColor: #25abdd;
+$firstFontColor: #452e76;
+$secondFontColor: #808080;
+
+$max-width: 1300px;
+
+$transition: .3s;
+$boxShadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+$textShadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+
+$breakPoints: (
+  mobile: 768px,
+  tablet: 992px,
+  desktop: 1200px
+);
+
+@mixin media($breakpoint) {
+  @if map-has-key($breakPoints, $breakpoint) {
+    @media (max-width: #{map-get($breakPoints, $breakpoint)}) {
+      @content;
+    }
+  }
+}
+
+@mixin hoverEffect() {
+  opacity: 1;
+  transition: $transition opacity;
+  &:hover {
+    opacity: .7;
+  }
+}
